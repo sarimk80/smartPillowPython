@@ -61,7 +61,7 @@ while True:
         sendNotification(topic, data,'High heart rate','Your patient heart rate rose above 95 bpm')
     if int(data['field2']) > 37 :
         sendNotification(topic, data,'High Temperature Alert','Your patient temperature rose above normal body temperature')
-    if int(data['field1']) > 50 and not bool(data['field3']) :
+    if int(data['field1']) > 50 and not bool(data['field3'].capitalize()) :
         sendNotification(topic, data,'Wake up Alert','Your patient has woke up from bed')
 
     # See documentation on defining a message payload.
